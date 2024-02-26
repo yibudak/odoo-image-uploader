@@ -90,7 +90,7 @@ class ProductProduct(models.Model):
                 "sequence": data.get("sequence"),
                 "storage": "db",
                 "file_db_store": data.get("image_data"),
-                "filename": data.get("image_filename"),
+                "filename": data.get("filename", "product_image") + ".jpeg",
                 "is_published": data.get("is_published"),
                 "owner_id": product.product_tmpl_id.id,
                 "owner_model": "product.template",
